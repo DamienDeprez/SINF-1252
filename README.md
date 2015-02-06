@@ -1,0 +1,2 @@
+# SINF-1252
+cours LSINF 1252 de l'UCL 
