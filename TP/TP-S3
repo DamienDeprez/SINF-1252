@@ -1,0 +1,34 @@
++------------------+
+|	TP S3	   |
++------------------+
+
+***Question 1***
+malloc alloue de la mémoire sur le tas et renvoi un pointeur sans remettre à zéro la mémoire
+calloc effectue la même action que malloc mais remet à zéro la mémoire
+
+calloc prend plus de temp que malloc car elle doit remettre la mémoire à zéro
+
+***Question 2***
+non, il ne faut pas remplacer malloc par calloc dans la fonction push car on met une valeur à chaque éléments de la structure=> on affecte la mémoire
+
+***Question 3***
+Dans le cas où l'on ne passe pas un pointeur, on va faire une copie de la variable dans le stack et une fois que la fonction est terminée, le stack de la fonction est libérée donc nous ne sommes plus sur que la variable pointée à cet endroi là est celle que nous avons mis
+
+***Question 4***
+Non car ce que l'on passe en valeur à la fonction c'est la valeur du pointeur vers le sommet de la pile et pas le pointeur en lui même donc les fonctions ne peuvent pas modifier le pointeur de manière durable
+
+***Question 5***
+Les talbleaux à deux dimensions sont stockés ligne par ligne
+
++-------------------------------Code--------------------------------------------+
+|	int a[3][3] = {{1,2,3},{4,5,6},{7,8,9}};				|
+|	int *ptr = &a;								|
+|	int i =0;								|
+|	for (i=0;i<9;i++)							|
+|	{									|
+|	printf("a[%d] = %d est stocké à l'adresse %p\n",i,*(ptr+i),(ptr+i));	|
+|	}									|
++-------------------------------------------------------------------------------+
+
+***Question 6***
+
